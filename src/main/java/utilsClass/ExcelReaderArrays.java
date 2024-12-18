@@ -12,25 +12,26 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class ExcelReaderArrays {
-	
+
 	public String[][] excelArray() throws IOException
 	{
-		
-		
+
+
 		File file=new File("C:\\demo\\employee.xlsx");
 		FileInputStream fis=new FileInputStream(file);
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
 		XSSFSheet sht= wb.getSheet("Sheet1");
-		
-		
+
+
 		int lastRow=sht.getLastRowNum();
 		int lastColumn=sht.getRow(0).getLastCellNum();
 		String dataaa[][]=new String[lastRow+1][lastColumn];
-		
-		
-		
+
+
+
 		for(int i=0;i<=lastRow;i++)
 		{
+
 			for(int j=0;j<lastColumn;j++)
 			{
 				DataFormatter dataFormatter = new DataFormatter();
@@ -40,24 +41,38 @@ public class ExcelReaderArrays {
 			}
 			//System.out.println();
 		}
-		
-//		for(String ss[]:data)
-//		{
-//			System.out.println(Arrays.toString(ss));
-//		}
-		
-		
-		
-		
+
+		//		for(String ss[]:data)
+		//		{
+		//			System.out.println(Arrays.toString(ss));
+		//		}
+
+
+
+
 		return dataaa;
-		
-		
-		
+
+
+
 	}
-	
-	
-	
-	
-	
+
+
+	public static void main(String args[]) throws IOException
+	{
+		ExcelReaderArrays o=new ExcelReaderArrays();
+
+		String s[][]=o.excelArray();
+
+		for(String ss[]:s)
+		{
+			System.out.println(Arrays.toString(ss));
+		}
+
+
+
+
+	}
+
+
 
 }

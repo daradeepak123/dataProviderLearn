@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="readData_Excel.ReadDataSpreadSheet">
+      <class name="readData_Excel.ReadDataExcel">
         <methods>
-          <include name="testthis"/>
+          <include name="dataRead"/>
         </methods>
-      </class> <!-- readData_Excel.ReadDataSpreadSheet -->
+      </class> <!-- readData_Excel.ReadDataExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -23,13 +23,10 @@ public class ReadDataSpreadSheet {
 	@Test (dataProvider = "hello")
 	public  void testthis(String s,String ss,String sss,String ssss,String sssss) throws IOException {
 		// TODO Auto-generated method stub
-		UtilClassess o=new UtilClassess();
+		//UtilClassess o=new UtilClassess();
 		//o.getData("C:\\demo\\employee.xlsx","Sheet1");
 		System.out.println(s+" \t" +ss+" \t"+sss+" \t"+ssss+" \t"+sssss);
 		
-		
-		
-
 	}
 
 }
